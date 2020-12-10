@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index3.css">
+</head>
+
+<body>
+    <div class="ply">
+    </div>
+    <script>
+        var div = document.querySelector(".ply")
+        for (var i = 0; i < 8; i++) {
+            var ul = document.createElement("ul");
+            for (var j = 0; j < 10; j++) {
+                var li = document.createElement("li");
+                ul.appendChild(li);
+            }
+            div.appendChild(ul);
+        }
+    </script>
+</body>
+
+</html>

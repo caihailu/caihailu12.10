@@ -1,0 +1,109 @@
+.ply{
+    width: 400px;
+    height: 600px;
+    margin: 50px auto;
+    overflow: hidden;
+    ul{
+        width: 50px;
+        height: 200px;
+        float: left;
+        list-style: none;
+        padding: 0px;
+    }
+}
+
+.com(@inde,@num) when(@inde<11){
+    ul:nth-child(@{num}) li:nth-child(@{inde}){
+        width: @inde*2px;
+    }
+    .com(@inde+1,@num);
+}
+.com(1 ,1);
+
+.ply ul:nth-child(1) li{
+    height: 2px;
+    margin: 0 auto;
+    background-color: blue;
+}
+
+.com(1 ,2);
+.ply ul:nth-child(2) li{
+    height: 2px;
+    margin: 0 auto;
+    background-color: red;
+}
+
+
+.com1(@inde,@num) when(@inde<11){
+    ul:nth-child(@{num}) li:nth-child(@{inde}){
+        width:20- @inde*2px;
+    }
+    .com1(@inde+1,@num);
+}
+
+
+.com1(1 ,3);
+.ply ul:nth-child(3) li{
+    height: 2px;
+    margin: 0 auto;
+    background-color: blue;
+}
+
+.com1(1 ,4);
+.ply ul:nth-child(4) li{
+    height: 2px;
+    margin: 0 auto;
+    background-color: red;
+}
+
+
+
+.com2(@inde,@num) when(@inde<11){
+    ul:nth-child(@{num}) li:nth-child(@{inde}){
+        height:20- @inde*2px;
+        margin-top: @inde*1px !important;
+    }
+    .com2(@inde+1,@num);
+}
+.com2(1 ,5);
+
+.ply ul:nth-child(5) li{
+    width: 2px;
+    margin: 0 auto;
+    background-color: blue;
+    float: right;
+}
+
+.com2(1 ,6);
+.ply ul:nth-child(6) li{
+    width: 2px;
+    margin: 0 auto;
+    background-color: red;
+    float: right;
+}
+
+
+.com3(@inde,@num) when(@inde<11){
+    ul:nth-child(@{num}) li:nth-child(@{inde}){
+        height:20- @inde*2px;
+        margin-top: @inde*1px !important;
+    }
+    .com3(@inde+1,@num);
+}
+
+
+.com3(1 ,7);
+.ply ul:nth-child(7) li{
+    width: 2px;
+    margin: 0 auto;
+    background-color: blue;
+    float: left;
+}
+
+.com3(1 ,8);
+.ply ul:nth-child(8) li{
+    width: 2px;
+    margin: 0 auto;
+    background-color: red;
+    float: left;
+}
